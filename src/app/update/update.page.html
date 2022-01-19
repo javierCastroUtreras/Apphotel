@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cambiar reserva</ion-title>
+    <ion-button slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list lines = "full"> 
+   <ion-item>
+    <ion-label position="floating">Lugar</ion-label>
+      <ion-input [(ngModel)]="destino" type = "text" placeholder="ej: Barcelona"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Fecha llegada</ion-label>
+      <ion-datetime [(ngModel)]="llegada" value="1990-02-19" placeholder="Select Date"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Fecha salida</ion-label>
+      <ion-datetime [(ngModel)]="salida" value="1990-02-20" placeholder="Select Date"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Habitaciones</ion-label>
+      <ion-input [(ngModel)]="habitaciones" type="number" ></ion-input>
+      <ion-label position="floating">Adultos</ion-label>
+      <ion-input  [(ngModel)]="adultos" type="number"></ion-input>
+      <ion-label position="floating">Niños</ion-label>
+      <ion-input  [(ngModel)]="kids" type="number"></ion-input>
+    </ion-item>
+    <ion-row>
+    <ion-col> 
+      <ion-button type ="button" color="Medium" (click)="updateReserva()" expand="block" fill="solid" shape="round">
+      cambiar datos!     
+      </ion-button>
+    </ion-col>
+  </ion-row>  
+  </ion-list>
+</ion-content>

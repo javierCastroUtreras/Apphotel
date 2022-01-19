@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Reservar</ion-title>
+    <ion-button slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card-content>
+    <h1>La mejor oferta Garantizada</h1>
+  <ion-list>
+  
+   <ion-item>
+    <ion-label>Lugar</ion-label>
+      <ion-input [(ngModel)]="destino" placeholder="ej: Barcelona"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fecha llegada</ion-label>
+      <ion-datetime [(ngModel)]="llegada" value="1990-02-19" placeholder="Select Date"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fecha salida</ion-label>
+      <ion-datetime [(ngModel)]="salida" value="1990-02-20" placeholder="Select Date"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Habitaciones</ion-label>
+      <ion-input [(ngModel)]="habitaciones" type="number" ></ion-input>
+      <ion-label>Adultos</ion-label>
+      <ion-input  [(ngModel)]="adultos" type="number"></ion-input>
+      <ion-label>Niños</ion-label>
+      <ion-input  [(ngModel)]="kids" type="number"></ion-input>
+    </ion-item>
+   <!--  <ion-item>
+      <input type="file" [(ngModel)]="imagen" (change)="selectedFile($event)" />
+   </ion-item>   -->
+   
+  </ion-list>
+ <ion-button color="Medium" (click)="addReserva()" expand="block" fill="solid" shape="round">
+   Buscar!
+ </ion-button>
+</ion-card-content>
+</ion-content>

@@ -1,0 +1,44 @@
+<ion-content>
+
+  <ion-slides pager="true" class="slide-full">
+  
+  <ion-slide *ngFor="let slide of slides">
+    
+  <ion-card mode='ios'>
+
+    <img [src]="slide.img" class="slide-image">
+
+    <ion-card-header>
+      <ion-card-title>{{slide.titulo}} </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{slide.desc}}
+    </ion-card-content>
+  </ion-card>
+  
+  </ion-slide>
+  
+  </ion-slides>
+  
+  
+  </ion-content>
+
+  <ion-footer>
+
+<ion-grid fixed>
+
+  <ion-row>
+
+    <ion-col>
+
+      <ion-button color="Medium" expand="full" shape="round" routerLink="/tabs/tab2" >
+
+       Reservar Ahora!
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+</ion-grid>
+
+
+  </ion-footer>
